@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* (Boleh hapus seluruh @font-face Amiamie kalau tak dipakai lagi) */
+
+/* Ganti token font ke Orbitron */
+@theme {
+  --color-primary: #e5e5e0;
+  --color-DarkLava: #393632;
+  --color-SageGray: #8b8b73;
+  --color-gold: #cfa355;
+
+  /* Ubah ke Orbitron */
+  --font-amiamie: "Orbitron", ui-sans-serif, system-ui, -apple-system,
+                  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+                  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-amiamie-round: "Orbitron", ui-sans-serif, system-ui, -apple-system,
+                        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+                        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --animate-marquee: marquee 40s infinite linear;
+  @keyframes marquee {
+    from { transform: translateX(0) }
+    to { transform: translateX(calc(-100% - var(--gap))) }
+  }
+}
+
+/* Ini yang bikin semua teks jadi Orbitron */
+body {
+  /* background: #e5e5e0; */
+  background: linear-gradient(to right bottom, #000000, #0e0005, #14000f, #160018, #140021, #140021, #140021, #140021, #160018, #14000f, #0e0005, #000000);
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--font-amiamie);
+}
+
+/* utilities kamu tetap sama di bawah ini... */
+
+
+@utility clip-path {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+@utility banner-text-responsive {
+  @apply text-[38px] sm:text-[88px] md:text-[88px] lg:text-[100px] leading-9 sm:leading-16 lg:leading-20;
+}
+
+@utility value-text-responsive {
+  @apply text-2xl md:text-[26px] lg:text-[32px];
+}
+
+@utility marquee-text-responsive {
+  @apply text-[28px] sm:text-[36px] lg:text-[42px];
+}
+
+@utility contact-text-responsive {
+  @apply text-[42px] sm:text-[52px] md:text-[62px] lg:text-[100px];
+}
+
