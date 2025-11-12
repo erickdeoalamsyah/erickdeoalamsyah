@@ -1,91 +1,105 @@
-// index.js
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa6"; 
 export const servicesData = [
   {
-    title: "FullStack Development",
+    title: "Full-Stack Development",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "I design and ship end-to-end web products—aligning business requirements with clean architecture, precise UI/UX, efficient APIs, and production-grade quality.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        title: "Product Architecture",
+        description:
+          "(Domain modeling, API contracts, modular boundaries, stack decisions driven by business needs)",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Javascript, Interactive UI/UX)",
+        title: "Frontend Engineering",
+        description:
+          "(React/Vue + TypeScript, predictable state, responsive layouts, smooth animations with GSAP/Framer Motion)",
       },
       {
-        title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        title: "Backend & APIs",
+        description:
+          "(Node.js/Express, Auth & RBAC, REST/GraphQL, payments/licensing integrations, file service & messaging)",
       },
     ],
   },
   {
     title: "DevOps & Cloud Solutions",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "Predictable, secure deployments. I set up CI/CD, automate infrastructure, and add observability so apps stay stable 24/7 on VPS or cloud—and scale without drama.",
     items: [
       {
         title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        description:
+          "(GitHub Actions, automated build & tests, versioning, zero-downtime deploys, fast rollbacks)",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Infrastructure & Runtime",
+        description:
+          "(Linux/Nginx, SSL, Docker/Compose, domains & subdomains, caching, SSR/Edge when it makes sense)",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "Observability",
+        description:
+          "(Prometheus/Grafana, structured logging, alerting, basic tracing for rapid incident response)",
       },
     ],
   },
   {
-    title: "Security & Optimization",
+    title: "Security & Performance",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "Security and speed together. I harden apps from code to server config while removing bottlenecks so the experience stays fast and safe as usage grows.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "Application Hardening",
+        description:
+          "(Input validation, rate limiting, XSS/SQLi protection, OAuth/JWT, secret management & dependency audits)",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Performance Engineering",
+        description:
+          "(Query/API profiling, indexing & caching, bundle optimization, realistic Lighthouse 90+ targets)",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "Quality Assurance",
+        description:
+          "(Unit & integration tests, pragmatic e2e, architectural reviews & targeted refactors without blocking releases)",
       },
     ],
   },
   {
     title: "Web & Mobile Apps",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "Clear interfaces drive adoption. I build responsive, interactive web apps and mobile prototypes (React Native/Flutter) to validate ideas quickly and ship with confidence.",
     items: [
       {
-        title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        title: "Rich Web Interfaces",
+        description:
+          "(Precise UI/UX, accessibility, micro-interactions, intuitive navigation patterns)",
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        title: "Progressive Web Apps",
+        description:
+          "(Offline mode, push notifications, smart caching strategies, installable experience)",
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "Mobile Prototypes",
+        description:
+          "(React Native/Flutter single codebase for fast validation, smooth handoff to production)",
       },
     ],
   },
 ];
+
 export const projects = [
   {
     id: 1,
     name: "E-commerce Isoneday Studio Brand",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
+      "Designed and built the platform from scratch (Next.js, Node/Express, PostgreSQL) to production-ready: modular architecture, secure checkout (Midtrans), real-time chat (Socket.io), bot protection (Arcjet), observability (Docker + Prometheus), and automated tests (Jest).",
+    impact: "faster launch, fewer transaction errors, better ops visibility, and a shopping flow that remains stable under real traffic.",
     href: "",
     image: "/assets/projects/isoneday1.png",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -103,10 +117,11 @@ export const projects = [
     id: 2,
     name: "POS Ferdila Garage",
     description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
+      "Digitized cashier and operations (Next.js/React, Node/Express, PostgreSQL) with role-based access and an analytics dashboard delivering real-time insights on revenue, inventory, and mechanic fees.",
+    impact:"shorter checkout time, major drop in input/change errors, and quicker daily decisions via precise metrics and filters.",
     href: "",
     image: "/assets/projects/posbengkel1.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -121,10 +136,11 @@ export const projects = [
     id: 3,
     name: "SkillStory Landing Page",
     description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
+      "Modernized end-to-end UI/UX (Nuxt) and restructured CMS (Strapi) with new collection types (auto-grid TikTok embeds, Gallery, Client Logos, Running Schedule) and a clean content API; deployed on VPS.",
+    impact: "content goes live faster without a dev loop, brand credibility is elevated, and the content foundation is ready to scale for future campaigns.",
     href: "",
     image: "/assets/projects/skillstory1.png",
-    bgImage: "/assets/backgrounds/map.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Nuxt" },
       { id: 2, name: "CMS Strapi" },
@@ -137,10 +153,11 @@ export const projects = [
     id: 4,
     name: "Kesflo Management System Skillstory",
     description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
+      "Joined an existing product as a troubleshooter: closed critical bugs (auth, transaction filters, auto-refresh), hardened Email Verification via SMTP & Google OAuth, and designed safe-delete for categories (reassign/cascade) to preserve data integrity.",
+    impact:"fewer operational incidents, smoother onboarding, and lighter support load as critical edge cases are addressed.",
     href: "",
     image: "/assets/projects/kesflo.png",
-    bgImage: "/assets/backgrounds/poster.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Vue.js" },
       { id: 2, name: "Node.js" },
@@ -153,10 +170,11 @@ export const projects = [
     id: 5,
     name: "Disney Film Clone",
     description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
+      "Showcased modern React UI (Vite + Tailwind) using TMDB data: category browsing, concise details, and a lightweight watchlist.",
+    impact : "demonstrates component craftsmanship, clean state management, plus responsiveness and accessibility that translate directly to production apps.",
     href: "",
     image: "/assets/projects/disneyfilm.png",
-    bgImage: "/assets/backgrounds/table.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Vite" },
       { id: 2, name: "React" },
@@ -170,10 +188,11 @@ export const projects = [
     id: 6,
     name: "Gradient Tailwind / css Generator",
     description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
+      "Built a gradient generator with live preview, dual Color 1/Color 2 pickers, a randomizer, and instant export to both plain CSS and Tailwind utility classes (one-click copy). Implemented with React + Tailwind, with clean formatting for consistent snippets.",
+      impact: "accelerates designer–developer workflow, reduces handoff errors, ensures consistent styling tokens, and cuts gradient setup time from minutes to seconds.",
     href: "",
     image: "/assets/projects/gradient.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Vite" },
       { id: 2, name: "React" },
@@ -186,10 +205,11 @@ export const projects = [
     id: 7,
     name: "Weather App",
     description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
+      "Turned OpenWeatherMap into immediate user value: auto-detect location, city search, detailed metrics, and hourly forecasts with a responsive UI (Vite/React/Tailwind).",
+      impact:"instant usefulness right after location permission; clean component architecture easy to extend for advanced features.",
     href: "",
     image: "/assets/projects/weather.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Vite" },
       { id: 2, name: "React" },
@@ -203,10 +223,11 @@ export const projects = [
     id: 8,
     name: "Expense Income Tracker",
     description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
+      "Defined a clear front-end architecture (Vite/React/Tailwind, LocalStorage) for transaction inputs, monthly filters, daily/history views with calendar, and concise stats.",
+      impact: "users grasp cashflow instantly without a backend; showcases data modeling, friendly filtering UX, and reliable local persistence.",
     href: "",
     image: "/assets/projects/moneymanagement.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/backgrounds/bgproject.webp",
     frameworks: [
       { id: 1, name: "Vite" },
       { id: 2, name: "React" },
@@ -218,7 +239,7 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/erickdeoalamsyah/" },
-  { name: "LinkedIn", href: "https://id.linkedin.com/in/ericdeoalamsyah" },
-  { name: "GitHub", href: "https://github.com/erickdeoalamsyah" },
+  { name: "Instagram", href: "https://www.instagram.com/erickdeoalamsyah/", Icon: FaInstagram },
+  { name: "LinkedIn", href: "https://id.linkedin.com/in/ericdeoalamsyah", Icon: FaLinkedinIn },
+  { name: "GitHub", href: "https://github.com/erickdeoalamsyah", Icon: FaGithub },
 ];

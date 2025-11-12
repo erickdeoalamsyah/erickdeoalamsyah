@@ -99,9 +99,9 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black/98 text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
       >
-        <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
+        <div className="flex flex-col text-5xl gap-y-2 md:text-5xl lg:text-7xl">
           {["home", "services", "about", "work", "contact"].map(
             (section, index) => (
               <div key={index} ref={(el) => (linksRef.current[index] = el)}>
@@ -130,16 +130,20 @@ const Navbar = () => {
           </div>
           <div className="font-light">
             <p className="tracking-wider text-white/50">Social Media</p>
-            <div className="flex flex-col flex-wrap md:flex-row gap-x-2">
-              {socials.map((social, index) => (
+            <div className="flex items-center gap-3 md:gap-4">
+              {socials.map(({ href, Icon, name }, i) => (
                 <a
-                  key={index}
-                  href={social.href}
-                  className="text-sm leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300"
+                  key={i}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  title={name}
+                  className="p-2 "
                 >
-                  {"{ "}
-                  {social.name}
-                  {" }"}
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-white/80 hover:text-blue-900" />
+                  {/* teks untuk screen reader (opsional): */}
+                  <span className="sr-only">{name}</span>
                 </a>
               ))}
             </div>
@@ -147,7 +151,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
+        className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-gradient-to-br from gray-200 to-gray-600 rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
         onClick={toggleMenu}
         style={
           showBurger

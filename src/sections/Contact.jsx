@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mt-20 flex flex-col justify-between min-h-screen"
+      className="flex flex-col justify-between min-h-screen"
     >
       <div>
         <AnimatedHeaderSection
@@ -59,7 +59,7 @@ const Contact = () => {
             <div className="social-link">
               <h2>Social Media</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <div className="flex flex-wrap gap-2">
+              {/* <div className="flex flex-wrap gap-2">
                 {socials.map((social, index) => (
                   <a
                     key={index}
@@ -71,12 +71,28 @@ const Contact = () => {
                     {" }"}
                   </a>
                 ))}
+              </div> */}
+              <div className="flex items-center gap-3 md:gap-4">
+                {socials.map(({ href, Icon, name }, i) => (
+                  <a
+                    key={i}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    title={name}
+                    className="p-2 "
+                  >
+                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-white/80 hover:scale-130 transition-all duration-300" />
+                    {/* teks untuk screen reader (opsional): */}
+                    <span className="sr-only">{name}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <Marquee items={items} className="text-white bg-transparent" /> */}
     </section>
   );
 };
