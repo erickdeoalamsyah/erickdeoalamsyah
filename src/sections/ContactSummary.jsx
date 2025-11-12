@@ -36,9 +36,9 @@ const ContactSummary = () => {
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
+      className="mt-20 flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
     >
-      {/* <Marquee items={items} /> */}
+
       <div className="overflow-hidden font-light text-center contact-text-responsive">
         <p>
           “ Let’s build a <br />
@@ -47,13 +47,6 @@ const ContactSummary = () => {
           web application <span className="text-gold">together</span> “
         </p>
       </div>
-      {/* <Marquee
-        items={items2}
-        reverse={true}
-        className="text-gray-300 bg-transparent border-y-2"
-        iconClassName="stroke-gold stroke-2 text-primary"
-        icon="material-symbols-light:square"
-      /> */}
     </section>
   );
 };
